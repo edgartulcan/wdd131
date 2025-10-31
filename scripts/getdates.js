@@ -1,5 +1,5 @@
-// Display current year
+// Fecha actual en el copyright
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Display last modified date
-document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+// Fecha de última modificación del documento
+document.getElementById("lastModified").textContent = "Last Modification: " + document.lastModified;

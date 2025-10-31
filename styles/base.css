@@ -80,6 +80,23 @@ aside {
     border-radius: 8px;
 }
 
+
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+.box {
+    margin: 1rem;
+    padding: 1rem;
+   
+}
+
 /* Footer */
 footer {
     background-color: #004a7c;

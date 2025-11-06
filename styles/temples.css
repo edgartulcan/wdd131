@@ -25,7 +25,7 @@ h1 {
 }
 
 .navigation {
-    display: none;
+    display: flex;
     flex-direction: column;
 
 }

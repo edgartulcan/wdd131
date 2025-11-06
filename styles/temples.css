@@ -31,14 +31,18 @@ h1 {
 }
 
 .navigation a {
-    color: white;
+    display: none;
+    margin: 1rem;
+    text-align: center;
+    color: #eee;
     text-decoration: none;
-    padding: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .navigation a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    margin: .75rem;
+    font-size: larger;
+    border: 1px #7fffd4 solid;
+    color: #7fffd4;
 }
 
 .open {
@@ -74,8 +78,8 @@ figcaption {
 }
 
 footer {
-    color: white;
+    background-color: #2b2bd3;
+    color: #eee;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
+    padding: 10px;
 }

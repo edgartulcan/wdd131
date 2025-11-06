@@ -1,24 +1,28 @@
-@media screen and (min-width: 800px) {
-    main {
-        grid-template-columns: 1fr 1fr 1fr;
+@media screen and (min-width: 700px) {
+    #menu {
+        display: none;
     }
 
-    h1 {
-        grid-column: 1/4;
-    }
-
-    nav {
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
+    header {
         flex-direction: row;
     }
 
-    nav a {
-        display: block;
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 
-    #menu {
-        display: none;
+    .navigation a {
+        padding: 1rem 1.5rem;
+        border: none;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    main {
+        max-width: 1000px;
     }
 }

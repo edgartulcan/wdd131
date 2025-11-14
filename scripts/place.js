@@ -22,7 +22,6 @@ year.innerHTML = today.getFullYear();
 document.getElementById("lastModified").innerHTML = "Last Modification: " + document.lastModified;
 
 function calculateWindChill(temp, windSpeed){
-    // if temperature is less than or equal to 50 °F and wind speed is greater than 3 mph than perform calculation
     return (35.74 + (0.6215 * temp) - (35.75 * (windSpeed ** 0.16)) + (0.4275 * temp *(windSpeed**0.16)));
 }
 

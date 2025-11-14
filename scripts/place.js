@@ -1,24 +1,39 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+const year = document.getElementById("currentyear");
+const weather = document.querySelector(".weather");
 
-// WEATHER VALUES (estáticos por ahora)
-const temperature = parseFloat(document.getElementById("temp").textContent);
-const windSpeed = parseFloat(document.getElementById("speed").textContent);
+const today = new Date();
 
-// Wind Chill Formula (Celsius)
-function calculateWindChill(t, v) {
-  return (
-    13.12 +
-    0.6215 * t -
-    11.37 * Math.pow(v, 0.16) +
-    0.3965 * t * Math.pow(v, 0.16)
-  );
+const temperature = 50; // temperature in °F
+const windSpeed = 5; // wind speed in mph
+let windChill = "N/A";
+
+if(temperature <= 50 && windSpeed > 3){
+    windChill = calculateWindChill(temperature,windSpeed).toFixed(1);
 }
 
-// VALIDATION RULES (Metric)
-if (temperature <= 10 && windSpeed > 4.8) {
-  const wc = calculateWindChill(temperature, windSpeed).toFixed(1);
-  document.getElementById("windchill").textContent = `${wc} °C`;
-} else {
-  document.getElementById("windchill").textContent = "N/A";
+let weatherInfo = [
+    ["Temperature(°F):",temperature],
+    ["Conditions:", "Partly Cloudy"],
+    ["Wind(mph):",windSpeed],
+    ["Wind Chill(°F):", windChill]
+]
+
+year.innerHTML = today.getFullYear();
+document.getElementById("lastModified").innerHTML = "Last Modification: " + document.lastModified;
+
+function calculateWindChill(temp, windSpeed){
+    // if temperature is less than or equal to 50 °F and wind speed is greater than 3 mph than perform calculation
+    return (35.74 + (0.6215 * temp) - (35.75 * (windSpeed ** 0.16)) + (0.4275 * temp *(windSpeed**0.16)));
 }
+
+windchill = calculateWindChill(temperature, windSpeed);
+
+weatherInfo.forEach(function(info){
+    const label = document.createElement("label");
+    const p = document.createElement("p");
+
+    label.textContent = info[0];
+    p.textContent=info[1];
+    weather.append(label);
+    weather.append(p);
+})

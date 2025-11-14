@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guayaquil | Places | Edgar Tulcan</title>
+    <meta name="description" content="Informational page about Guayaquil. It includes weather infomation.">
+    <meta name="author" content="Edgar Tulcan">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="./scripts/places.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Idaho</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1300px)" srcset="./images/hero-largew.webp">
+                <source media="(min-width: 800px)" srcset="./images/hero-large.webp">
+                <!--Photo by <a href="https://unsplash.com/@nunit0616?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sunit Kajarekar</a> on <a href="https://unsplash.com/photos/a-large-waterfall-with-a-church-in-the-background-vyRdMxdSVxI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  -->
+                <source media="(min-width: 500px)" srcset="./images/hero-med.webp">
+                <!-- Photo by <a href="https://unsplash.com/@danielhombre19?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Cutler</a> on <a href="https://unsplash.com/photos/green-trees-under-blue-sky-during-daytime-kZw2l_oyGUQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+                <img src="./images/hero-small.webp" alt="Picture of Idaho Falls" width="1000" height="530" id="image">
+                <!-- Photo by <a href="https://unsplash.com/@danielhombre19?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Cutler</a> on <a href="https://unsplash.com/photos/green-trees-under-blue-sky-during-daytime-kZw2l_oyGUQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+            </picture>
+        </div>
+        <section class="data">
+            <h2>Data</h2>
+            <label>Area:</label>
+            <p>83,642 sq mi</p>
+            <label>Population:</label>
+            <p>2,001,619</p>
+            <label>Capital:</label>
+            <p>Boise</p>
+            <label>Languages:</label>
+            <p>English</p>
+            <label>Currency:</label>
+            <p>US Dollar</p>
+            <label>Time Zone:</label>
+            <p>UTC -7:00 / -6:00</p>
+            <label>Calling Code:</label>
+            <p>+1-208 or +1-986</p>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="./images/weather_icon.svg" alt="weather icon" id="weatherIcon">
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> <span class="yarndings">a</span> Brady Burgener <span
+                class="yarndings">a</span> Idaho, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

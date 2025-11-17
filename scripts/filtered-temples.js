@@ -76,28 +76,28 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
   {
-    templeName: "Mount Timpanogos Utah",
-    location: "American Fork, Utah, United States",
-    dedicated: "1996, October, 13",
+    templeName: "Rio de Janeiro Brazil Temple",
+    location: "Barra Da Tijuca, Rio De Janeiro, Brazil",
+    dedicated: "2022, May, 8",
     area: 107240,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mount-timpanogos-utah/400x250/mount-timpanogos-temple-lds-885511-wallpaper.jpg"
+    "https://www.churchofjesuschrist.org/imgs/001db7326e638032470a02813c9e47191ef74b0e/full/640%2C/0/default"
   },
   {
-    templeName: "Provo City Center",
-    location: "Provo, Utah, United States",
-    dedicated: "2016, March, 20",
+    templeName: "Quito Ecuador Temple",
+    location: "Cumbaya, Quito, Ecuador",
+    dedicated: "2022, November, 20",
     area: 85084,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center/400x250/provo-city-center-temple-1572517-wallpaper.jpg"
+    "https://www.churchofjesuschrist.org/imgs/490df500d14611ec90efeeeeac1ee7e67e80c168/full/640%2C/0/default"
   },
   {
-    templeName: "Casper Wyoming",
-    location: "Casper, Wyoming, United States",
-    dedicated: "2024, November, 24",
+    templeName: "Guayaquil Ecuador Temple",
+    location: "Guayaquil, Guayas, Ecuador",
+    dedicated: "1999, August, 2",
     area: 9950,
     imageUrl:
-    "https://www.churchofjesuschrist.org/imgs/bb74748cc5e811eeaea1eeeeac1e060ff4c1e350/full/640%2C/0/default"
+    "https://www.churchofjesuschrist.org/imgs/b6e397f7a6c219442a9987bcd8c92ff78c5d50a6/full/640%2C/0/default"
   }
 ];
 

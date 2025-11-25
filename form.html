@@ -25,29 +25,30 @@
     <main>
         <form method="get" action="review.html">
             <div class="section">
-                <label for="product" class="section">Product Name<span class="required"></span><select name="product"
+                <label for="product" class="section">Product Name<span class="required">*</span><select name="product"
                         id="product" required>
                         <option value="" disabled selected>Select a Product ...</option>
                     </select></label>
             </div>
 
 
-            <div class="section" id="rating">Overall Rating<span class="required"></span>
+            <div class="section" id="rating">Overall Rating<span class="required">*</span>
                 <div class="stars">
-                    <label for="onestar">&star;<input type="radio" name="rating" id="onestar" value="1" required></label>
+                    <label for="onestar">&star;<input type="radio" name="rating" id="onestar" value="1"
+                            required></label>
                     <label for="twostar">&star;&star;<input type="radio" name="rating" id="twostar" value="2"
                             required></label>
                     <label for="threestar">&star;&star;&star;<input type="radio" name="rating" id="threestar" value="3"
                             required></label>
-                    <label for="fourstar">&star;&star;&star;&star;<input type="radio" name="rating" id="fourstar" value="4"
-                            required></label>
+                    <label for="fourstar">&star;&star;&star;&star;<input type="radio" name="rating" id="fourstar"
+                            value="4" required></label>
                     <label for="fivestar">&star;&star;&star;&star;&star;<input type="radio" name="rating" id="fivestar"
                             value="5" required></label>
                 </div>
             </div>
 
             <div class="section">
-                <label for="date" class="section">Date of Installation<span class="required"></span><input type="date"
+                <label for="date" class="section">Date of Installation<span class="required">*</span><input type="date"
                         name="date" id="date" required></label>
             </div>
 
@@ -74,10 +75,10 @@
         </form>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> <span class="yarndings"></span> Edgar Tulcan <span
-                class="yarndings"></span> Guayaquil, Ecuador</p>
+        <p>&copy;<span id="currentyear"></span> <span class="yarndings">a</span> Brady Burgener <span
+                class="yarndings">a</span> Idaho, USA</p>
         <p id="lastModified"></p>
-     </footer>
+    </footer>
 </body>
 
 </html>

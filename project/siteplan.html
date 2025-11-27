@@ -15,7 +15,6 @@
     <title>Opticenter LS | Home</title>
 
 </head>
-
 <body>
 
     <!-- HEADER -->
@@ -24,48 +23,50 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
+            <a href="formlens.html">Product Review</a> <!-- 🔗 AÑADIDO -->
             <a href="#">Services</a>
             <a href="#">Contact</a>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
-        <h2>Clear Vision Starts Here</h2>
-        <p>Professional eye care, modern frames, and exam services for all ages.</p>
-        <a href="products.html">
-            <button class="cta-button">See Our Products</button>
-        </a>
-    </section>
+    <main>
+        <section>
+            <h2>Clear Vision Starts Here</h2>
+            <p>Professional optical care and high-quality eyewear for all ages.</p>
 
-    <!-- MAIN SECTIONS -->
-    <section class="sections">
+            <!-- BOTÓN HACIA PRODUCTOS -->
+            <a href="products.html">See Our Products</a>
+            <br><br>
 
-        <div class="section-box">
+            <!-- 🔗 NUEVO BOTÓN HACIA PRODUCT REVIEW -->
+            <a href="formlens.html">Write a Product Review</a>
+        </section>
+
+        <!-- SECCIONES -->
+        <section>
             <h3>Our Vision</h3>
-            <p>We provide high-quality optical services and products designed to improve your visual health and comfort.
-            </p>
-        </div>
+            <p>We provide modern optical services and a variety of high-quality glasses designed to improve your visual
+                comfort.</p>
+        </section>
 
-        <div class="section-box">
+        <section>
             <h3>Services</h3>
-            <p>Eye exams, lens fitting, frame adjustments, and personalized recommendations.</p>
-        </div>
+            <p>Eye exams, frame adjustments, lens replacement, and more.</p>
+        </section>
 
-        <div class="section-box">
+        <section>
             <h3>Featured Products</h3>
-            <p>Check out our full catalog of glasses, frames, and accessories.</p>
+            <p>Discover our most popular glasses and accessories.</p>
             <a href="products.html">View Products →</a>
-        </div>
-
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
         <p>&copy; <span id="currentyear"></span> Opticenter LS – Guayaquil, Ecuador</p>
     </footer>
 
-    <!-- JS for dynamic year -->
     <script>
         document.getElementById("currentyear").textContent = new Date().getFullYear();
     </script>

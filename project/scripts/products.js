@@ -1,9 +1,12 @@
 const year = document.getElementById("currentyear");
-const home = document.getElementById("home");
-const old = document.getElementById("old");
-const newid = document.getElementById("new");
-const large = document.getElementById("large");
-const small = document.getElementById("small");
+
+// New filters
+const allGlasses = document.getElementById("all-glasses");
+const usedGlasses = document.getElementById("used-glasses");
+const newGlasses = document.getElementById("new-glasses");
+const expensiveGlasses = document.getElementById("expensive-glasses");
+const cheapGlasses = document.getElementById("cheap-glasses");
+
 
 const today = new Date();
 
@@ -18,135 +21,96 @@ hamButton.addEventListener("click", () => {
 	hamButton.classList.toggle("open");
 });
 
-const temples = [
+// ---------- ARRAY DE LENTES ----------
+const glasses = [
   {
-    templeName: "Aba Nigeria",
-    location: "Aba, Nigeria",
-    dedicated: "2005, August, 7",
-    area: 11500,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    brand: "Ray-Ban",
+    material: "Acetato",
+    price: 150,
+    isNew: true,
+    imageUrl: ""
   },
   {
-    templeName: "Manti Utah",
-    location: "Manti, Utah, United States",
-    dedicated: "1888, May, 21",
-    area: 74792,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    brand: "Oakley",
+    material: "TR90",
+    price: 95,
+    isNew: false,
+    imageUrl: "images/oakley1.jpg"
   },
   {
-    templeName: "Payson Utah",
-    location: "Payson, Utah, United States",
-    dedicated: "2015, June, 7",
-    area: 96630,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    brand: "Gucci",
+    material: "Acetato Premium",
+    price: 260,
+    isNew: true,
+    imageUrl: "images/gucci1.jpg"
   },
   {
-    templeName: "Yigo Guam",
-    location: "Yigo, Guam",
-    dedicated: "2020, May, 2",
-    area: 6861,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    brand: "Vulk",
+    material: "Metal",
+    price: 40,
+    isNew: false,
+    imageUrl: "images/vulk1.jpg"
   },
   {
-    templeName: "Washington D.C.",
-    location: "Kensington, Maryland, United States",
-    dedicated: "1974, November, 19",
-    area: 156558,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
-  },
-  {
-    templeName: "Lima Perú",
-    location: "Lima, Perú",
-    dedicated: "1986, January, 10",
-    area: 9600,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
-  },
-  {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
-    dedicated: "1983, December, 2",
-    area: 116642,
-    imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
-  },
-  {
-    templeName: "Rio de Janeiro Brazil Temple",
-    location: "Barra Da Tijuca, Rio De Janeiro, Brazil",
-    dedicated: "2022, May, 8",
-    area: 107240,
-    imageUrl:
-    "https://www.churchofjesuschrist.org/imgs/001db7326e638032470a02813c9e47191ef74b0e/full/640%2C/0/default"
-  },
-  {
-    templeName: "Quito Ecuador Temple",
-    location: "Cumbaya, Quito, Ecuador",
-    dedicated: "2022, November, 20",
-    area: 85084,
-    imageUrl:
-    "https://www.churchofjesuschrist.org/imgs/490df500d14611ec90efeeeeac1ee7e67e80c168/full/640%2C/0/default"
-  },
-  {
-    templeName: "Guayaquil Ecuador Temple",
-    location: "Guayaquil, Guayas, Ecuador",
-    dedicated: "1999, August, 2",
-    area: 9950,
-    imageUrl:
-    "https://www.churchofjesuschrist.org/imgs/b6e397f7a6c219442a9987bcd8c92ff78c5d50a6/full/640%2C/0/default"
+    brand: "Prada",
+    material: "Titanio",
+    price: 180,
+    isNew: true,
+    imageUrl: "images/prada1.jpg"
   }
 ];
 
-createTempleCard(temples);
+createGlassCard(glasses);
 
-home.addEventListener("click", () =>{
-  createTempleCard(temples);
+// ---------- FILTROS ACTUALIZADOS ----------
+allGlasses.addEventListener("click", () => {
+  createGlassCard(glasses);
 });
 
-old.addEventListener("click", () => {
-  createTempleCard(temples.filter(temple => parseInt(temple.dedicated.slice(0,4))<1900));
+usedGlasses.addEventListener("click", () => {
+  createGlassCard(glasses.filter(glass => glass.isNew === false));
 });
 
-newid.addEventListener("click", () => {
-  createTempleCard(temples.filter(temple => parseInt(temple.dedicated.slice(0,4))>2000));
+newGlasses.addEventListener("click", () => {
+  createGlassCard(glasses.filter(glass => glass.isNew === true));
 });
 
-large.addEventListener("click", () => {
-  createTempleCard(temples.filter(temple => parseInt(temple.area)>90000));
-})
+expensiveGlasses.addEventListener("click", () => {
+  createGlassCard(glasses.filter(glass => glass.price > 120));
+});
 
-small.addEventListener("click", () => {
-  createTempleCard(temples.filter(temple => parseInt(temple.area)<10000));
-})
- 
-function createTempleCard(filteredTemples){
+cheapGlasses.addEventListener("click", () => {
+  createGlassCard(glasses.filter(glass => glass.price < 50));
+});
+
+// ---------- CREAR TARJETAS ----------
+function createGlassCard(filteredGlasses) {
   document.querySelector(".temples").innerHTML = '';
-  filteredTemples.forEach(temple => {
+  filteredGlasses.forEach(glass => {
     let card = document.createElement("section");
-    let name = document.createElement("h2");
-    let location = document.createElement("p");
-    let dedication = document.createElement("p");
-    let area = document.createElement("p");
+    let brand = document.createElement("h2");
+    let material = document.createElement("p");
+    let price = document.createElement("p");
+    let newTag = document.createElement("p");
     let img = document.createElement("img");
 
-    name.textContent = temple.templeName;
-    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-    dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
+    brand.textContent = glass.brand;
+    material.innerHTML = `<span class="label">Material:</span> ${glass.material}`;
+    price.innerHTML = `<span class="label">Precio:</span> $${glass.price}`;
+    newTag.innerHTML = `<span class="label">Nuevo:</span> ${
+      glass.isNew ? "Sí" : "No"
+    }`;
+
+    img.setAttribute("src", glass.imageUrl);
+    img.setAttribute("alt", `${glass.brand}`);
     img.setAttribute("loading", "lazy");
 
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedication);
-    card.appendChild(area);
+    card.appendChild(brand);
+    card.appendChild(material);
+    card.appendChild(price);
+    card.appendChild(newTag);
     card.appendChild(img);
 
     document.querySelector(".temples").appendChild(card);
-  })
+  });
 }

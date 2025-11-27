@@ -28,35 +28,35 @@ const glasses = [
     material: "Acetato",
     price: 150,
     isNew: true,
-    imageUrl: ""
+    imageUrl: "https://images2.ray-ban.com//cdn-record-files-pi/46a585d2-0b37-410d-b309-ae90017fd47b/e1fca6ed-1224-4dcb-a5ad-ae90017fda37/0RB3016__1367B1__P21__shad__qt.png?impolicy=RB_Product_clone&width=720&bgc=%23f2f2f2"
   },
   {
     brand: "Oakley",
     material: "TR90",
     price: 95,
     isNew: false,
-    imageUrl: "images/oakley1.jpg"
+    imageUrl: "https://assets2.oakley.com/cdn-record-files-pi/2dada0dc-d98e-47be-9525-b2dc011235c2/cabf5406-a69f-45e9-a561-b2dc01123d95/0OW8002__800202__P21__shad__al31.png?impolicy=OO_ratio&width=3000"
   },
   {
     brand: "Gucci",
     material: "Acetato Premium",
     price: 260,
     isNew: true,
-    imageUrl: "images/gucci1.jpg"
+    imageUrl: "https://lux.mx/cdn/shop/articles/Lentes_Gucci_Cuadrados.webp?v=1692896065"
   },
   {
     brand: "Vulk",
     material: "Metal",
     price: 40,
     isNew: false,
-    imageUrl: "images/vulk1.jpg"
+    imageUrl: "https://do2padres.com/cdn/shop/files/MBLK--R-BLUE---PERFIL_800x.jpg?v=1688988231"
   },
   {
     brand: "Prada",
     material: "Titanio",
     price: 180,
     isNew: true,
-    imageUrl: "images/prada1.jpg"
+    imageUrl: "https://image4.cdnsbg.com/1/13/554159_side_2_1639635327485.jpg?width=900&height=450&q=90"
   }
 ];
 

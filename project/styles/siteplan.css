@@ -19,7 +19,8 @@ main {
     height: auto;
 }
 
-.data{
+.data,
+.weather {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--color-main);
@@ -27,6 +28,7 @@ main {
     padding: 10px;
     gap: 10px;
 }
+
 nav {
     margin-top: 1rem;
     display: block;

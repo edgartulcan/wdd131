@@ -58,3 +58,21 @@ footer {
     font-weight: 400;
     font-style: normal;
 }
+
+.sketch {
+    padding: 2rem;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.sketch-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sketch-gallery img {
+    width: 100%;
+    border-radius: 6px;
+}

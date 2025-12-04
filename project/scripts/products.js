@@ -85,7 +85,7 @@ cheapGlasses.addEventListener("click", () => {
 
 // ---------- TARJETAS CREADAS PARA DIFERENCIAR MAS FACIL ----------
 function createGlassCard(filteredGlasses) {
-  document.querySelector(".temples").innerHTML = '';
+  document.querySelector(".product").innerHTML = '';
   filteredGlasses.forEach(glass => {
     let card = document.createElement("section");
     let brand = document.createElement("h2");
@@ -111,6 +111,6 @@ function createGlassCard(filteredGlasses) {
     card.appendChild(newTag);
     card.appendChild(img);
 
-    document.querySelector(".temples").appendChild(card);
+    document.querySelector(".product").appendChild(card);
   });
 }

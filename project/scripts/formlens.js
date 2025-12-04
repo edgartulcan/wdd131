@@ -58,7 +58,7 @@ if (review !== null) {
     let td1 = document.createElement("td");
     td1.textContent = item.name;
     let td2 = document.createElement("td");
-    td2.textContent = "N/A";
+    td2.textContent = item["averagerating"];
 
     tr.appendChild(td0);
     tr.appendChild(td1);

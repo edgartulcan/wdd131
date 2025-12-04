@@ -9,11 +9,11 @@ document.getElementById("lastModified").innerHTML = "Last Modification: " + docu
 // PRODUCTOS REALES DEL SITIO
 // ---------------------------
 const products = [
-  { id: "rayban", name: "Ray-Ban" },
-  { id: "oakley", name: "Oakley" },
-  { id: "gucci", name: "Gucci" },
-  { id: "vulk", name: "Vulk" },
-  { id: "prada", name: "Prada" }
+  { id: "rayban", name: "Ray-Ban", averagerating: 4.5 },
+  { id: "oakley", name: "Oakley", averagerating: 4.7 },
+  { id: "gucci", name: "Gucci", averagerating: 3.5 },
+  { id: "vulk", name: "Vulk", averagerating: 3.9 },
+  { id: "prada", name: "Prada", averagerating: 5.0 }
 ];
 
 // ---------------------------

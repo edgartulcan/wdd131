@@ -1,78 +1,87 @@
+// ------------------ YEAR & LAST MODIFIED ------------------
 const year = document.getElementById("currentyear");
-
 const today = new Date();
-
 year.innerHTML = today.getFullYear();
 document.getElementById("lastModified").innerHTML = "Last Modification: " + document.lastModified;
 
+// ------------------ HAMBURGER MENU ------------------
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector("nav");
 
 hamButton.addEventListener("click", () => {
-	navigation.classList.toggle("open");
-	hamButton.classList.toggle("open");
+    navigation.classList.toggle("open");
+    hamButton.classList.toggle("open");
 });
 
-// ---------- ARRAY DE LENTES ----------
-const costumeservice = [
-  {
-    service: "Ray-Ban",
-    sumdescription: "Acetato",
-    imageUrl: "https://images2.ray-ban.com//cdn-record-files-pi/46a585d2-0b37-410d-b309-ae90017fd47b/e1fca6ed-1224-4dcb-a5ad-ae90017fda37/0RB3016__1367B1__P21__shad__qt.png?impolicy=RB_Product_clone&width=720&bgc=%23f2f2f2"
-  },
-  {
-    service: "Oakley",
-    sumdescription: "TR90",
-    imageUrl: "https://assets2.oakley.com/cdn-record-files-pi/2dada0dc-d98e-47be-9525-b2dc011235c2/cabf5406-a69f-45e9-a561-b2dc01123d95/0OW8002__800202__P21__shad__al31.png?impolicy=OO_ratio&width=3000"
-  },
-  {
-    service: "Gucci",
-    sumdescription: "Acetato Premium",
-    imageUrl: "https://lux.mx/cdn/shop/articles/Lentes_Gucci_Cuadrados.webp?v=1692896065"
-  },
-  {
-    service: "Vulk",
-    sumdescription: "Metal",
-    imageUrl: "https://do2padres.com/cdn/shop/files/MBLK--R-BLUE---PERFIL_800x.jpg?v=1688988231"
-  },
-  {
-    service: "Prada",
-    sumdescription: "Titanio",
-    imageUrl: "https://image4.cdnsbg.com/1/13/554159_side_2_1639635327485.jpg?width=900&height=450&q=90"
-  }
+// ------------------ ARRAY DE SERVICIOS ------------------
+const services = [
+    {
+        name: "Examen Visual Completo",
+        description: "Incluye evaluación de agudeza visual, presión ocular y revisión general.",
+        imageUrl: "https://www.opeluce.com.pe/blog/wp-content/uploads/2019/05/opeluce-blog-recomendaciones-para-examen-de-la-vista.jpg"
+    },
+    {
+        name: "Adaptación de Lentes de Contacto",
+        description: "Evaluación para determinar el tipo adecuado de lente de contacto.",
+        imageUrl: "https://conscienciavisual.com/wp-content/uploads/2015/06/lente-de-contacto.jpg"
+    },
+    {
+        name: "Arreglo y Mantenimiento de Lentes",
+        description: "Ajuste de monturas, limpieza profesional y mantenimiento general.",
+        imageUrl: "https://www.opticavalle.com.co/wp-content/uploads/2023/05/Arreglo-de-gafas-en-cali.jpg"
+    },
+    {
+        name: "Ubicación del Local",
+        description: "Encuéntranos fácilmente con el siguiente mapa interactivo.",
+        map: true
+    }
 ];
 
-createGlassCard(glasses);
+// ------------------ CREACIÓN DE TARJETAS ------------------
+function createServiceCards() {
+    const container = document.querySelector(".description");
+    container.innerHTML = "";
 
-// ---------- FILTROS ACTUALIZADOS ----------
+    services.forEach(service => {
+        let card = document.createElement("section");
 
+        // Título del servicio
+        let title = document.createElement("h2");
+        title.textContent = service.name;
+        card.appendChild(title);
 
-// ---------- TARJETAS CREADAS PARA DIFERENCIAR MAS FACIL ----------
-function createGlassCard(filteredGlasses) {
-  document.querySelector(".description").innerHTML = '';
-  filteredGlasses.forEach(glass => {
-    let card = document.createElement("section");
-    let service = document.createElement("h2");
-    let sumdescription = document.createElement("p");
-    let img = document.createElement("img");
+        // Descripción
+        let desc = document.createElement("p");
+        desc.textContent = service.description;
+        card.appendChild(desc);
 
-    brand.textContent = glass.brand;
-    material.innerHTML = `<span class="label">Material:</span> ${glass.material}`;
-    price.innerHTML = `<span class="label">Precio:</span> $${glass.price}`;
-    newTag.innerHTML = `<span class="label">Nuevo:</span> ${
-      glass.isNew ? "Sí" : "No"
-    }`;
+        // Si es tarjeta normal con imagen
+        if (!service.map) {
+            let img = document.createElement("img");
+            img.src = service.imageUrl;
+            img.alt = service.name;
+            img.loading = "lazy";
+            card.appendChild(img);
+        }
 
-    img.setAttribute("src", glass.imageUrl);
-    img.setAttribute("alt", `${glass.brand}`);
-    img.setAttribute("loading", "lazy");
+        // Si es tarjeta del MAPA
+        if (service.map) {
+            let mapFrame = document.createElement("iframe");
+            mapFrame.src =
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0432839837918!2d-79.89272362551128!3d-2.1370790371468393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d0060481553%3A0x6c7586269cdca1dc!2sOpticenter%20LS!5e0!3m2!1ses!2sec!4v1764875281362!5m2!1ses!2sec";
+            mapFrame.width = "100%";
+            mapFrame.height = "300";
+            mapFrame.style.border = "0";
+            mapFrame.allowFullscreen = true;
+            mapFrame.loading = "lazy";
+            mapFrame.referrerPolicy = "no-referrer-when-downgrade";
+            card.appendChild(mapFrame);
+        }
 
-    card.appendChild(brand);
-    card.appendChild(material);
-    card.appendChild(price);
-    card.appendChild(newTag);
-    card.appendChild(img);
-
-    document.querySelector(".product").appendChild(card);
-  });
+        container.appendChild(card);
+    });
 }
+
+// Ejecutar función
+createServiceCards();
+

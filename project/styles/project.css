@@ -12,17 +12,33 @@ header {
 }
 
 main {
-    position: relative;
+    margin: 1rem auto;
 }
 
-
-label {
-    text-align: right;
-    margin: auto 0;
+main div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
+section {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    margin: auto;
+    height: 100%;
+}
+
+img {
+    display: block;
+    max-width: 400px;
+    margin: 1rem;
+    box-shadow: 5px 5px 10px #222;
+}
+
+h1,
+h2,
 p {
-    margin: 0;
+    text-align: center;
 }
 
 nav {

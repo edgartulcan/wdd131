@@ -83,7 +83,7 @@ cheapGlasses.addEventListener("click", () => {
   createGlassCard(glasses.filter(glass => glass.price < 50));
 });
 
-// ---------- CREAR TARJETAS ----------
+// ---------- TARJETAS CREADAS PARA DIFERENCIAR MAS FACIL ----------
 function createGlassCard(filteredGlasses) {
   document.querySelector(".temples").innerHTML = '';
   filteredGlasses.forEach(glass => {
